@@ -1,11 +1,215 @@
 @import "mytheme.scss";
 @import "addons.scss";
-
 // This file prefixes all rules with the theme name to avoid causing conflicts with other themes.
 // The actual styles should be defined in mytheme.scss
-
 .mytheme {
-  @include addons;
-  @include mytheme;
+    @include addons;
+    @include mytheme;
+}
+
+.contentTemplate {
+    background-color: white;
+    border-radius: 20px;
+    height: 50%;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.hoverable:hover {
+    box-shadow: 5px 5px 10px #888888;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-panel {
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.corFundo {
+    background-color: #dfdefc;
+}
+
+.contentViewTemplate {
+    margin-top: -2.3%;
+}
+
+.alinharCentro {
+    margin: 0 auto;
+}
+
+.botaoAtender {
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-button:hover {
+    border-radius: 20px !important;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-button {
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.mytheme .v-menubar {
+    float: right;
+}
+
+.v-menubar-menuitem {
+    background-color: slategray !important;
+    float: right !important;
+    color: floralwhite !important;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-menubar-menuitem:hover {
+    background-color: darkslateblue !important;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-textfield:focus {
+    background-color: #e5f5ff;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320em;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-nativebutton {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 12px 3px 12px;
+    text-decoration: none;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.v-nativebutton:hover {
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.panelHeader {
+    border-radius: 20px !important;
+    margin-top: -2% !important;
+    width: 100% !important;
+    padding: 2% !important;
+    background-color: lightslategray !important;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.panelHeader:hover {
+    background-color: #1f8b8b !important;
+    transition: 320em;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 320ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.alinharDireita {
+    float: right;
+}
+
+@media only screen and (max-width: 1024px) {
+    .contentTemplate {
+        background-color: white;
+        border-radius: 20px;
+        height: 100%;
+        transition: 320em;
+        transition-timing-function: ease-in-out;
+        -webkit-transition: 320ms;
+        -webkit-transition-timing-function: ease-in-out;
+    }
+    .v-grid-cell {
+        font-size: 28px !important;
+        font-weight: 
+    }
+    .v-nativebutton {
+        background: #3498db;
+        background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+        background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+        background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+        background-image: -o-linear-gradient(top, #3498db, #2980b9);
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        padding: 5px 12px 3px 12px;
+        text-decoration: none;
+        
+        font-weight: bold !important;
+        font-size: 22px !important;
+        transition: 320em;
+        transition-timing-function: ease-in-out;
+        -webkit-transition: 320ms;
+        -webkit-transition-timing-function: ease-in-out;
+    }
+    .v-app {
+        font-size: 25px !important;
+    }
+    .v-captiontext {
+        font-size: 26px !important;
+        font-weight: bold !important;
+    }
+    .v-panel-caption {
+        font-size: 28px !important;
+        font-weight: bold !important;
+    }
+    
+    .v-button {
+        
+        height: 50% !important;
+        
+    }
+    
+    .v-caption {
+    
+        font-size: 26px !important;
+        font-weight: bold !important;
+    
+    }
+    
+}
+
 
 }

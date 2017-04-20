@@ -9,11 +9,11 @@
 </session-config>
  <servlet>
     <servlet-name>MyServlet</servlet-name>
-    <servlet-class>com.indra.grupo.indragrupo.MyUIServlet</servlet-class>
+    <servlet-class>com.indra.grupo.MyUIServlet</servlet-class>
     <init-param>
         <description>My Main Page</description>
         <param-name>UI</param-name>
-        <param-value>com.indra.grupo.indragrupo.MyUI</param-value>
+        <param-value>com.indra.grupo.MyUI</param-value>
     </init-param>
     <init-param>
         <description>Enable Session Timeout (heartbeat can't keep alive)</description>

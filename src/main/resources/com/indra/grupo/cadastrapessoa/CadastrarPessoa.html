@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.0.2">
+ </head>
+ <body>
+  <vaadin-horizontal-layout responsive size-full>
+   <vaadin-vertical-layout responsive width="444px">
+    <vaadin-label icon="fonticon://Vaadin-Icons/e7b1" caption="Dados Cadastrais" plain-text></vaadin-label>
+    <vaadin-text-field caption="Nome:" responsive width="294px" _id="nome"></vaadin-text-field>
+    <vaadin-text-field caption="CPF:" width="294px" _id="cpf"></vaadin-text-field>
+    <vaadin-text-field caption="RG:" responsive width="294px" _id="rg"></vaadin-text-field>
+    <vaadin-text-field caption="Orgão Emissor:" responsive width="294px" _id="orgaoEmissor"></vaadin-text-field>
+    <vaadin-native-select caption="UF:" responsive width="294px" data-item-type="java.lang.String" _id="uf">
+     <option item="Option1">Option 1</option>
+     <option item="Option2">Option 2</option>
+     <option item="Option3">Option 3</option>
+    </vaadin-native-select>
+    <vaadin-label plain-text></vaadin-label>
+    <vaadin-label plain-text></vaadin-label>
+    <vaadin-horizontal-layout>
+     <vaadin-button icon="fonticon://Vaadin-Icons/e75b" style-name="primary" responsive width="178px" plain-text>
+       Salvar 
+     </vaadin-button>
+     <vaadin-button icon="fonticon://Vaadin-Icons/e7ad" style-name="danger" responsive width="187px" plain-text>
+       Cancelar 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout responsive width="463px">
+    <vaadin-label icon="fonticon://Vaadin-Icons/e7b1" caption="Endereço" plain-text></vaadin-label>
+    <vaadin-text-field caption="CEP:" responsive width="283px" _id="cep"></vaadin-text-field>
+    <vaadin-text-field caption="Logradouro:" responsive width="283px" _id="logradouro"></vaadin-text-field>
+    <vaadin-text-field caption="Bairro:" responsive width="283px" _id="bairro"></vaadin-text-field>
+    <vaadin-text-field caption="Cidade:" responsive width="283px" _id="cidade"></vaadin-text-field>
+    <vaadin-native-select caption="Estado:" responsive width="283px" data-item-type="java.lang.String" _id="estado">
+     <option item="Option1">Option 1</option>
+     <option item="Option2">Option 2</option>
+     <option item="Option3">Option 3</option>
+    </vaadin-native-select>
+   </vaadin-vertical-layout>
+  </vaadin-horizontal-layout>
+ </body>
+</html>
