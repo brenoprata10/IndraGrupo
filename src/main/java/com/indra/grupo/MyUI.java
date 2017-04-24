@@ -1,17 +1,31 @@
 package com.indra.grupo;
 
-import com.indra.grupo.cadastrapessoa.CadastrarPessoa;
-import com.indra.grupo.cadastrapessoa.CadastrarPessoaView;
-import com.indra.grupo.consultapessoa.ConsultarPessoaView;
+import javax.inject.Inject;
+
+import com.indra.grupo.dao.BaseDAO;
+import com.indra.grupo.modelo.Pessoa;
+import com.indra.grupo.rotas.Rotas;
+import com.indra.grupo.template.VaadinTemplate;
 import com.vaadin.annotations.Theme;
+import com.vaadin.cdi.CDIUI;
+import com.vaadin.cdi.CDIViewProvider;
+import com.vaadin.cdi.URLMapping;
+import com.vaadin.navigator.Navigator;
 import com.vaadin.server.FontAwesome;
+import com.vaadin.server.Page;
+import com.vaadin.server.Resource;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.shared.Position;
+import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.Component;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.MenuItem;
+import com.vaadin.ui.Notification.Type;
+import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
@@ -23,84 +37,45 @@ import com.vaadin.ui.VerticalLayout;
  * The UI is initialized using {@link #init(VaadinRequest)}. This method is intended to be 
  * overridden to add component to the user interface and initialize non-component functionality.
  */
+@CDIUI("")
 @Theme("mytheme")
 public class MyUI extends UI {
-
-	private ConsultarPessoaView consultarPessoaView = new ConsultarPessoaView();
 	
-	private CadastrarPessoaView cadastrarPessoa = new CadastrarPessoaView();
+	@Inject
+	private CDIViewProvider viewProvider;
 
-    @Override
-    protected void init(VaadinRequest vaadinRequest) {
-    	
-    	final VerticalLayout layout = new VerticalLayout();
-    	
-    	VerticalLayout content = new VerticalLayout();
-    	
-    	content.setStyleName("contentTemplate");
-    	
-    	setStyleName("corFundo");
-    	
-    	layout.setStyleName("corFundo");
+	private VerticalLayout content = new VerticalLayout();
+
+	@Override
+	protected void init(VaadinRequest vaadinRequest) {
+		
+		mostrarNotificacao("Seja Bem Vindo!","", Notification.TYPE_HUMANIZED_MESSAGE, 1900, Position.TOP_CENTER, FontAwesome.HAND_O_RIGHT);
+		
+		content.setStyleName("contentTemplate");
+		
+		setStyleName("corFundo");
+		
+		Navigator navigator = new Navigator(this, this);
+		
+        navigator.addProvider(viewProvider);
         
-    	MenuBar menuBar = new MenuBar();
-    	
-    	MenuBar.Command command = new MenuBar.Command() {
-			
-			@Override
-			public void menuSelected(MenuItem selectedItem) {
-				
-				if(selectedItem.getText().equals("Consultar Pessoa")){
-					
-					content.setSizeFull();
-					
-					content.removeAllComponents();
-		        	
-		        	content.addComponent(consultarPessoaView.consultarPessoaView());
-					
-				}
-				
-				if(selectedItem.getText().equals("Cadastrar Pessoa")){
-					
-					content.removeAllComponents();
-					
-		        	content.addComponents(cadastrarPessoa.cadastrarPessoaView());
-					
-				}
-				
-			}
-		};
-		
-		Panel panel = new Panel();
-		
-		panel.setContent(menuBar);
-		
-		panel.addStyleName("panelHeader");
-		
-		menuBar.addItem("Sair",FontAwesome.SIGN_OUT, command);
-		
-		menuBar.addItem("Cadastrar Pessoa",FontAwesome.PLUS ,command);
-		
-		menuBar.addItem("Consultar Pessoa",FontAwesome.SEARCH ,command);
-		
-		menuBar.addItem("Tela Inicial",FontAwesome.HOME,command);
-		
-        //Definir Template =================================================================================================================================================
+        setContent(VaadinTemplate.getTemplateMenu(navigator));
         
-        layout.addComponents(panel, content);
-        
-        layout.setResponsive(true);
-        
-        setContent(layout);
-        
-    }
-    
-    
-    
-   /* @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
-    public static class MyUIServlet extends VaadinServlet {
-    	
-    	
-    }*/
+        navigator.navigateTo(Rotas.Endereco.TELA_INICIAL);
+		
+	}
+	
+	private void mostrarNotificacao(String titulo, String message, Type tipoMensagem, int duracao, Position posicao,
+			FontAwesome icone) {
+
+		Notification notification = new Notification(titulo,message,tipoMensagem);
+		
+		notification.setDelayMsec(duracao);
+		notification.setPosition(posicao);
+		notification.setIcon(icone);
+		
+		notification.show(Page.getCurrent());
+		
+	}
+
 }

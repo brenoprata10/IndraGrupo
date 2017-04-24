@@ -6,8 +6,10 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/x
 		<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
 		
 		<non-jta-data-source>java:/test-ds</non-jta-data-source>
-		
-		<!-- <class></class> -->
+		<class>com.indra.grupo.modelo.Endereco</class>
+		<class>com.indra.grupo.modelo.Pessoa</class>
+		<class>com.indra.grupo.modelo.Rg</class>
+		<class>com.indra.grupo.modelo.Senha</class>
 		
 		 <properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />

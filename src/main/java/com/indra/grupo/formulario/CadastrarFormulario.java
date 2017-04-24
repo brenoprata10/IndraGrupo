@@ -1,7 +1,7 @@
 package com.indra.grupo.formulario;
 
-import com.indra.grupo.cadastrapessoa.CadastrarPessoa;
-import com.indra.grupo.cadastrapessoa.CadastrarPessoaView;
+import com.indra.grupo.views.cadastrapessoa.CadastrarPessoa;
+import com.indra.grupo.views.cadastrapessoa.CadastrarPessoaView;
 
 public class CadastrarFormulario extends CadastrarPessoa{
 

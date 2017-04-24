@@ -1531,6 +1531,187 @@ div.v-layout.v-horizontal.v-widget {
 	vertical-align: top;
 }
 
+.mytheme .app-shell .custom-menubar .v-menubar-menuitem {
+	position: relative;
+}
+
+.mytheme .app-shell .custom-menubar .v-menubar-menuitem :before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: #197de1;
+	bottom: -20px;
+	left: 0;
+}
+
+.mytheme .app-shell .navigation-bar {
+	background: #197de1;
+	z-index: 10000;
+}
+
+.mytheme .app-shell .logo {
+	color: #cde3f9;
+	text-align: center;
+	padding: 18.5px 9.25px;
+	font-size: 17.6px;
+}
+
+.mytheme .app-shell .view-title {
+	font-size: 17.6px;
+	color: #5f5f5f;
+	padding: 18.5px 12.33333px;
+}
+
+.mytheme .app-shell .padding {
+	padding: 12.33333px;
+}
+
+.mytheme .app-shell .padding-top {
+	padding-top: 12.33333px;
+}
+
+.mytheme .app-shell .padding-right {
+	padding-right: 12.33333px;
+}
+
+.mytheme .app-shell .padding-bottom {
+	padding-bottom: 12.33333px;
+}
+
+.mytheme .app-shell .padding-left {
+	padding-left: 12.33333px;
+}
+
+.mytheme .app-shell .content-section {
+	background: white;
+	border: 1px solid #efefef;
+	font-size: 14.4px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.mytheme .app-shell .menu {
+	float: right;
+	padding: 0 10px;
+	line-height: 37px;
+	color: #cde3f9;
+	display: none;
+}
+
+.mytheme .app-shell .menu .v-icon {
+	line-height: 1;
+	color: white;
+	font-size: 16px;
+}
+
+.mytheme .app-shell .navigation {
+	border-top: 1px solid #358fe9;
+	border-bottom: 1px solid #358fe9;
+	background: #1773cf;
+}
+
+.mytheme .app-shell .navigation .v-icon {
+	color: #88bdf2;
+}
+
+.mytheme .app-shell .navigation .v-button {
+	text-align: left;
+	font-size: 14.4px;
+	text-overflow: ellipsis;
+	color: #cde3f9;
+}
+
+.mytheme .app-shell .navigation .v-button.active, .mytheme .app-shell .navigation .v-button:focus {
+	color: white;
+}
+
+.mytheme .app-shell .navigation .v-button.active .v-icon, .mytheme .app-shell .navigation .v-button:focus .v-icon {
+	color: #e3f0fc;
+}
+
+.mytheme .app-shell .navigation .v-button:focus:after {
+	content: none;
+}
+
+.mytheme .app-shell .navigation .v-button.borderless:hover {
+	background: #156bc1;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container {
+	width: 80px !important;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .logo {
+	font-size: 12px;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .navigation .v-button {
+	font-size: 26px;
+	height: 60px;
+	padding: 10px 6px;
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .navigation .v-button:before {
+	content: none;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .navigation .v-button .v-button-wrap {
+	width: 100%;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .navigation .v-button .v-button-caption {
+	font-size: 9.6px;
+	margin: 0;
+	width: 100%;
+	float: left;
+	margin-top: 3px;
+	text-align: center;
+}
+
+.mytheme .app-shell[width-range~="601px-1000px"] .navigation-bar-container .navigation .v-button .v-icon {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .navigation-bar-container {
+	width: 0px !important;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .menu {
+	display: block;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .navigation {
+	display: none;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .navigation:hover, .mytheme .app-shell[width-range~="-600px"] .navigation:active, .mytheme .app-shell[width-range~="-600px"] .menu:focus + .navigation {
+	display: inline-block;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .navigation-bar {
+	position: fixed;
+	width: 100%;
+	height: 37px !important;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .logo {
+	line-height: 37px;
+	width: auto !important;
+	float: left;
+	padding: 0 14.8px;
+	font-size: 16px;
+}
+
+.mytheme .app-shell[width-range~="-600px"] .content-container {
+	padding-top: 37px;
+}
+
 .mytheme.v-app, .mytheme.v-app-loading {
 	font: 300 16px/1.55 "Open Sans", sans-serif;
 	color: #464646;
@@ -12443,7 +12624,17 @@ div.v-layout.v-horizontal.v-widget {
 }
 
 .contentViewTemplate {
-	margin-top: -2.3%;
+	max-height: 900px !important;
+	width: 94% !important;
+	margin-left: 3%;
+}
+
+.contentCadastroView {
+	max-height: 1000px !important;
+}
+
+.contentConsultaView {
+	max-height: 1140px !important;
 }
 
 .alinharCentro {
@@ -12463,6 +12654,11 @@ div.v-layout.v-horizontal.v-widget {
 	transition-timing-function: ease-in-out;
 	-webkit-transition: 320ms;
 	-webkit-transition-timing-function: ease-in-out;
+}
+
+.mytheme .v-button:after {
+	top: 0px !important;
+	bottom: 0px !important;
 }
 
 .v-button {
@@ -12516,11 +12712,44 @@ div.v-layout.v-horizontal.v-widget {
 	color: #ffffff;
 	font-size: 20px;
 	padding: 5px 12px 3px 12px;
+	top: 0px !important;
+	right: 0px !important;
+	bottom: 0px !important;
+	left: 0px !important;
 	text-decoration: none;
 	transition: 320em;
 	transition-timing-function: ease-in-out;
 	-webkit-transition: 320ms;
 	-webkit-transition-timing-function: ease-in-out;
+}
+
+.panelConsulta:hover {
+	background: #95f4b9 !important;
+	transition: 320em;
+	transition-timing-function: ease-in-out;
+	-webkit-transition: 320em;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.panelCadastrar:hover {
+	background: #95cff4 !important;
+	transition: 320em;
+	transition-timing-function: ease-in-out;
+	-webkit-transition: 320em;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.panelSair:hover {
+	background: #f49595 !important;
+	transition: 320em;
+	transition-timing-function: ease-in-out;
+	-webkit-transition: 320em;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.v-image {
+	max-width: 60% !important;
+	margin: 22% !important;
 }
 
 .v-nativebutton:hover {
@@ -12554,7 +12783,58 @@ div.v-layout.v-horizontal.v-widget {
 	float: right;
 }
 
-@media only screen and (max-width: 992px) {
+.bordaVermelha {
+	border-color: red !important;
+}
+
+.bordaVermelhaCombo .v-filterselect-input {
+	border-color: red !important;
+}
+
+.v-popupview-popup {
+	margin-left: 38% !important;
+	margin-top: -18% !important;
+	background-color: aliceblue !important;
+	border-radius: 20px !important;
+}
+
+.alinharDireita {
+	float: right !important;
+}
+
+.botaoVermelho {
+	background: #ff1616 !important;
+	background-color: #ff1616 !important;
+	border-color: #ff1616 !important;
+	color: white !important;
+}
+
+.botaoAzul {
+	background: #3498db !important;
+	background-color: #3498db !important;
+	border-color: #3498db !important;
+	color: white !important;
+}
+
+.templateMarginPopup {
+	margin-top: -13% !important;
+}
+
+.botaoVoltarConsulta {
+	border-radius: 20px !important;
+	top: -1px !important;
+	background: #3498db !important;
+	color: white !important;
+}
+
+.botaoVoltarHome {
+	border-radius: 20px !important;
+	top: -1px !important;
+	background: #3498db !important;
+	color: white !important;
+}
+
+@media only screen and (max-width: 1024px) {
 	.contentTemplate {
 		background-color: white;
 		border-radius: 20px;
@@ -12566,6 +12846,7 @@ div.v-layout.v-horizontal.v-widget {
 	}
 	.v-grid-cell {
 		font-size: 28px !important;
+		font-weight: bold !important;
 	}
 	.v-nativebutton {
 		background: #3498db;
@@ -12579,9 +12860,10 @@ div.v-layout.v-horizontal.v-widget {
 		border-radius: 28px;
 		font-family: Arial;
 		color: #ffffff;
-		font-size: 20px !important;
 		padding: 5px 12px 3px 12px;
 		text-decoration: none;
+		font-weight: bold !important;
+		font-size: 22px !important;
 		transition: 320em;
 		transition-timing-function: ease-in-out;
 		-webkit-transition: 320ms;
@@ -12599,8 +12881,6 @@ div.v-layout.v-horizontal.v-widget {
 		font-weight: bold !important;
 	}
 	.v-button {
-		font-weight: bold !important;
-		font-size: 25px !important;
 		height: 50% !important;
 	}
 	.v-caption {

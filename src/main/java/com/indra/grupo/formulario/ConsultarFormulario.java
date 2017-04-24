@@ -1,8 +1,7 @@
 package com.indra.grupo.formulario;
 
-import com.indra.grupo.MyUI;
-import com.indra.grupo.consultapessoa.ConsultarFila;
-import com.indra.grupo.consultapessoa.ConsultarPessoaView;
+import com.indra.grupo.views.consultapessoa.ConsultarFila;
+import com.indra.grupo.views.consultapessoa.ConsultarPessoaView;
 
 public class ConsultarFormulario extends ConsultarFila{
 

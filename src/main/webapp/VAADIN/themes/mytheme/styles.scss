@@ -1,8 +1,10 @@
 @import "mytheme.scss";
 @import "addons.scss";
+@import "designs.scss";
 // This file prefixes all rules with the theme name to avoid causing conflicts with other themes.
 // The actual styles should be defined in mytheme.scss
 .mytheme {
+    @include vaadin-app-shell-template;
     @include addons;
     @include mytheme;
 }
@@ -37,7 +39,27 @@
 }
 
 .contentViewTemplate {
-    margin-top: -2.3%;
+    max-height: 900px !important;
+    width: 94% !important;
+    margin-left: 3%;
+}
+
+.contentViewTemplate2 {
+    width: 94% !important;
+    max-height: 1500px !important;
+    margin-left: 3%;
+}
+
+.contentCadastroView {
+ 
+    max-height: 1060px !important;
+    
+}
+
+.contentConsultaView {
+ 
+    max-height: 1140px !important;
+    
 }
 
 .alinharCentro {
@@ -57,6 +79,11 @@
     transition-timing-function: ease-in-out;
     -webkit-transition: 320ms;
     -webkit-transition-timing-function: ease-in-out;
+}
+
+.mytheme .v-button:after {
+    top: 0px !important;
+    bottom: 0px !important;
 }
 
 .v-button {
@@ -110,11 +137,64 @@
     color: #ffffff;
     font-size: 20px;
     padding: 5px 12px 3px 12px;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
     text-decoration: none;
     transition: 320em;
     transition-timing-function: ease-in-out;
     -webkit-transition: 320ms;
     -webkit-transition-timing-function: ease-in-out;
+}
+
+.panelConsulta:hover {
+ 
+    background: #95f4b9 !important;
+    
+    transition: 320em;
+    
+    transition-timing-function: ease-in-out;
+    
+    -webkit-transition: 320em;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    
+}
+
+.panelCadastrar:hover {
+ 
+    background: #95cff4 !important;
+    
+    transition: 320em;
+    
+    transition-timing-function: ease-in-out;
+    
+    -webkit-transition: 320em;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    
+}
+
+.panelSair:hover {
+ 
+    background: #f49595 !important;
+    
+    transition: 320em;
+    
+    transition-timing-function: ease-in-out;
+    
+    -webkit-transition: 320em;
+    
+    -webkit-transition-timing-function: ease-in-out;
+    
+}
+
+.v-image {
+    
+    max-width: 60% !important;
+    margin: 22% !important;
+     
 }
 
 .v-nativebutton:hover {
@@ -148,6 +228,71 @@
     float: right;
 }
 
+.bordaVermelha{
+    
+    border-color: red !important;
+    
+}
+
+.bordaVermelhaCombo .v-filterselect-input{
+
+    border-color: red !important;
+
+}
+
+.v-popupview-popup {
+    margin-left: 38% !important;
+    margin-top: -18% !important;
+    background-color: aliceblue !important;
+    border-radius: 20px !important;
+}
+
+.alinharDireita {
+    float: right !important;
+}
+
+.botaoVermelho {
+    background: #ff1616 !important;
+    background-color: #ff1616 !important;
+    border-color: #ff1616 !important;
+    color: white !important;
+}
+
+.botaoAzul {
+    background: #3498db !important;
+    background-color: #3498db !important;
+    border-color: #3498db !important;
+    color: white !important;
+}
+
+.templateMarginPopup {
+    margin-top: -13% !important;
+}
+
+.botaoVoltarConsulta {
+    
+    border-radius: 20px !important;
+    top: -1px !important;
+    background: #3498db !important;
+    color: white !important;
+}
+
+.botaoReativarSenha {
+    
+    top: -1px !important;
+    background: #3498db !important;
+    color: white !important;
+}
+
+.botaoVoltarHome {
+    border-radius: 20px !important;
+    top: -1px !important;
+    background: #3498db !important;
+    color: white !important;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
     .contentTemplate {
         background-color: white;
@@ -160,7 +305,7 @@
     }
     .v-grid-cell {
         font-size: 28px !important;
-        font-weight: 
+        font-weight: bold !important;
     }
     .v-nativebutton {
         background: #3498db;
@@ -176,7 +321,6 @@
         color: #ffffff;
         padding: 5px 12px 3px 12px;
         text-decoration: none;
-        
         font-weight: bold !important;
         font-size: 22px !important;
         transition: 320em;
@@ -195,21 +339,11 @@
         font-size: 28px !important;
         font-weight: bold !important;
     }
-    
     .v-button {
-        
         height: 50% !important;
-        
     }
-    
     .v-caption {
-    
         font-size: 26px !important;
         font-weight: bold !important;
-    
     }
-    
-}
-
-
 }

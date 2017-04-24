@@ -5,7 +5,7 @@
 <web-app>
 	
 	<session-config>
-    <session-timeout>1</session-timeout> <!-- 1 minute -->
+    <session-timeout>10</session-timeout> <!-- 10 minutos -->
 </session-config>
  <servlet>
     <servlet-name>MyServlet</servlet-name>
@@ -21,6 +21,7 @@
         <param-value>true</param-value>
     </init-param>
 </servlet> 
+
 <servlet-mapping>
     <servlet-name>MyServlet</servlet-name>
     <url-pattern>/*</url-pattern>
